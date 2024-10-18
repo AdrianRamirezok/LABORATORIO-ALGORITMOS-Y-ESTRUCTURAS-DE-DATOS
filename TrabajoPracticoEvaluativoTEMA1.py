@@ -130,10 +130,15 @@ while True:
         continue    
 
     if opcion=="11":
-          nombre_eliminar=input("ingrese el nombre a eliminar: ") 
-          nombre_estudiantes.remove(nombre_eliminar.lower())  
-          print("La lista actualizada es: ",nombre_estudiantes)
+        
+          nombre_eliminar=input("ingrese el nombre a eliminar: ")
+          if nombre_eliminar in nombre_estudiantes:
+           nombre_estudiantes.remove(nombre_eliminar.lower())  
+           print("La lista actualizada es: ",nombre_estudiantes)
+          else:
+             print("El nombre no se encuentra en la lista")
           continue
+             
       
     if opcion=="12":
        print("FIN")
